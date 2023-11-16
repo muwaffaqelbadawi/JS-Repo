@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery crash course | DomManipulation</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <style>
+        body {
+            font-style: Arial;
+            font-size: 17px;
+            background: #f4f4f4f4;
+            line-height: 1.5em;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        .myClass {
+            color: blue;
+            background: black;
+        }
+        
+        #myDiv {
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JQuery crash course| DomManipulation</h1>
+    </header>
+    <div id="container">
+        <button id="btn1">Button 1</button>
+        <p class="para1">This is a paragraph 1</p>
+        <p class="para2">This is a paragraph 2</p>
+    </div>
+    <div id="myDiv"></div>
+    <input type="text" id="newItem">
+    <ul id="list">
+        <li>Item List 1</li>
+        <li>Item List 2</li>
+        <li>Item List 3</li>
+        <li>Item List 4</li>
+    </ul>
+    <a href="./Events.html">JQueryEvents</a>
+    <ul id="users"></ul>
+
+    <script>
+        $(document).ready(function() {
+            // $('p.para1').css('color', 'red');
+            $('p.para1').css({
+                color: 'red',
+                background: '#ccc'
+            });
+
+            // $('p.para2').addClass('myClass');
+            // $('p.para2').removeClass('myClass');
+
+            // $('#btn1').click(function() {
+            //     $('p.para2').toggleClass('myClass');
+            // });
+
+            // // $('#myDiv').text('Hello world');
+            // $('#myDiv').html('<h3>Hello World</h3>');
+            // alert($('#myDiv').text());
+
+            /*
+            $('ul').append('<li>Appended Item</li>');
+            $('ul').prepend('<li>Pre Appended Item</li>');
+            $('ul').appendTo('.para2');
+            $('ul').prependTo('.para2');
+            $('ul').before('<h4>Hello</h4>');
+            $('ul').after('<h4>World</h4>');
+            $('ul').empty();
+            $('ul').detach();
+            $('a').attr('target', '_blank');
+            alert($('a').attr('href'));
+            $('a').removeAttr('target');
+            */
+
+            // $('p').wrap('<h1>');
+            // $('p').wrapAll('<h1>');
+
+            $('#newItem').keyup(function(e) {
+                var code = e.which;
+                if (code == 13) {
+                    e.preventDefault();
+                    $('ul').append('<li>' + e.target.value + '</li>');
+                }
+            });
+
+            /*
+            var myArray = ['Muwaffuq', 'Muwazzur', 'moyassar', 'Maeen'];
+            $.each(myArray, function(i, val) {
+                $('#users').append('<li>' + val + '</li>');
+            })
+            */
+
+            var newArr = $('ul#list li').toArray();
+            $.each(newArr, function(i, val) {
+                console.log(val.innerHTML);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* html {}
+
+.box {
+    font-size: 20px;
+}
+
+
+p {
+    font-size: 1rem;
+    border: 0.1rem black solid;
+    padding: 1rem;
+}
+
+p {
+    font-size: 1em;
+    border: 0.1em black solid;
+    padding: 1em;
+} */
+
+.box {
+    background: blue;
+    height: 100vh;
+}

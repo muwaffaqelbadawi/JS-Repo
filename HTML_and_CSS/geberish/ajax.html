@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+</head>
+
+<body>
+
+    
+    <button id="button">get text file</button>
+    <br></br>
+    <div id="text"></div>
+
+    <script>
+        //  create event listener
+        document.getElementById("button").addEventListener("click", loadText);
+
+        function loadText() {
+            // create XHR object
+            let xhr = new XMLHttpRequest();
+            // OPEN- type, url/file,async"boolean"
+            xhr.open("Get", "ajax2.txt", true)
+            console.log("readyState: ", xhr.readyState);
+
+            xhr.onprogress = function() {
+                console.log("readyState: ", xhr.readyState);
+            }
+
+
+            xhr.onload = function() {
+                if (this.status = 200) {
+                    console.log("readyState: ", xhr.readyState);
+                    document.getElementById("text").innerHTML = this.responseText;
+                    // console.log(this.responseText);
+                } else if (this.status == 404) {
+                    document.getElementById("text").innerHTML = "notFound";
+                }
+            }
+            xhr.onerror = function() {
+                console.log("Request Error...");
+            }
+
+            // xhr.onreadystatechange = function() {
+            //         // console.log("readyState: ", xhr.readyState);
+            //         if (this.readyState == 4 && this.status == 200) {
+            //             // console.log(this.responseText);
+            //         }
+
+            //     }
+            //     //  send request
+            xhr.send()
+        }
+        
+    </script>
+</body>
+
+</html>

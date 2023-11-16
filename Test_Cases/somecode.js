@@ -1,0 +1,14 @@
+const randomNumbers =
+    require("random-number")
+
+
+function randomItem(array) {
+    const randomIndex = randomNumber({
+        min: 0,
+        max: array.length - 1,
+        integer: true
+
+    })
+    return array[randomIndex]
+    randomItem(["a", "b", "c"])
+}

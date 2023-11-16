@@ -1,0 +1,6 @@
+20234723	12:47:42	6f95a96c-6401-4b19-ad71-5650c92b4ad6	/new-page.html	GET
+20234723	12:47:42	72c4a374-d702-47d5-a709-1514861e2e02	/public/css/style.css	GET
+20234723	12:47:42	0dabfe45-c1cf-4e6b-8cfa-0b48ff607e5c	/favicon.ico	GET
+20235023	12:50:34	64cbff6a-3a8d-40a4-91da-c3a4f3cf5b54	/new-page.html	GET
+20235123	12:51:16	8440e18d-972c-497e-9f0f-ef66db218645	/new-page.html	GET
+20235123	12:51:16	4dd5b37b-240b-4219-98c6-112aef3a5c07	/public/css/style.css	GET

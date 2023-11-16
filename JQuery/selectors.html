@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery crash course | selectors</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <style>
+        body {
+            font-style: Arial;
+            font-size: 17px;
+            background: #f4f4f4f4;
+            line-height: 1.5em;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JQuery crash course</h1>
+    </header>
+    <div id="container">
+        <h1 id="header1">Heading One</h1>
+        <p id="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum similique quasi minus consectetur eaque veritatis. <span> explicabo iure cupiditate modi magnam laborum voluptate </span> Cupiditate sit maiores labore sequi corporis, itaque
+            iusto.
+        </p>
+
+        <h1 class="header2">Heading Two</h1>
+        <p class="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum similique quasi minus consectetur eaque veritatis. <span> explicabo iure cupiditate modi magnam laborum voluptate </span> Cupiditate sit maiores labore sequi corporis, itaque
+            iusto.
+        </p>
+        <!-- <span>explicabo iure cupiditate modi</span> -->
+
+        <ul id="List">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+
+        <input type="button" value="button">
+        <input type="submit" value="submit">
+        <input type="text">
+
+        <a href="http://google.com">Google</a>
+        <a href="http://youtube.com">YouTube</a>
+    </div>
+
+    <script>
+        // $('h1').hide();
+        // $('h1#header1').hide();
+        // $('h1.header2').hide();
+        // $('.header2').hide();
+        // $('p span').css('color','red');
+        // $('span').css('color','red');
+        $('ul#List li:first').css('color', 'blue');
+        $('ul#List li:last').css('color', 'green');
+        $('ul#List li:even').css('background-color', 'gray');
+        $('ul#List li:odd').css('background-color', 'pink');
+        $('ul#List li:nth-child(3n)').css('list-style', 'none');
+        // $(':text').hide();
+        $('[href]').css('color', 'coral');
+        $('a[href="http://youtube.com"]').css('color', 'violet');
+        // $('*').hide();
+    </script>
+
+</body>
+
+</html>

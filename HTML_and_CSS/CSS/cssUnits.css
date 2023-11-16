@@ -1,0 +1,9 @@
+html {
+    /* font-size: 10px; */
+}
+
+p {
+    font-size: 1rem;
+    border: 0.1rem black solid;
+    padding: 1rem;
+}

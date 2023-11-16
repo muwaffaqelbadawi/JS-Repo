@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CSS Grids</title>
+</head>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        /*
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+        */
+        grid-gap: 1em;
+    }
+    
+    .container>div {
+        background: #eee;
+        padding: 1em;
+    }
+    
+    .container>div:nth-child(odd) {
+        background: #ddd;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eius, in neque provident corporis expedita optio tempora dicta vero odit nulla voluptas maiores minus aspernatur reiciendis consectetur aperiam vel culpa voluptatem possimus
+            est facere iure recusandae. Neque rem cupiditate possimus numquam delectus dolorum veniam sit sequi. Officiis nisi incidunt architecto fuga animi veritatis, commodi, quos itaque exercitationem sequi dolores suscipit hic magni fugiat dolorem
+            ipsa nostrum ratione esse quibusdam rerum! Dolores laboriosam amet, laudantium recusandae quo nesciunt molestias consectetur!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi, quidem ullam similique nam quas maxime officia, velit distinctio facere adipisci deserunt vero. Fugiat, similique illo amet impedit dolore earum!
+        </div>
+
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eius, in neque provident corporis expedita optio tempora dicta vero odit nulla voluptas maiores minus aspernatur reiciendis consectetur aperiam vel culpa voluptatem possimus
+            est facere iure recusandae. Neque rem cupiditate possimus numquam delectus dolorum veniam sit sequi. Officiis nisi incidunt architecto fuga animi veritatis, commodi, quos itaque exercitationem sequi dolores suscipit hic magni fugiat dolorem
+            ipsa nostrum ratione esse quibusdam rerum! Dolores laboriosam amet, laudantium recusandae quo nesciunt molestias consectetur!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi, quidem ullam similique nam quas maxime officia, velit distinctio facere adipisci deserunt vero. Fugiat, similique illo amet impedit dolore earum!
+        </div>
+    </div>
+</body>
+
+</html>
